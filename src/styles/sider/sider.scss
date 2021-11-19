@@ -1,0 +1,25 @@
+.aside {
+  &__button__create {
+    position: absolute;
+    top: 75px;
+    left: 85px;
+  }
+
+  &__button__auth {
+    position: absolute;
+    bottom: 75px;
+    left: 85px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aside {
+    &__button__create {
+      left: 20px;
+    }
+
+    &__button__auth {
+      left: 20px;
+    }
+  }
+}

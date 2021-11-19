@@ -1,0 +1,16 @@
+.layout {
+  min-height: 100vh;
+
+  &__box {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    &__select {
+      width: 200px;
+      margin: 10px;
+      padding: 10px 0;
+    }
+  }
+}
+
