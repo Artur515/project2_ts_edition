@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const AppointmentDeletePage = () => {
-    return (
-        <div>
-            Delete
-        </div>
-    );
+  return <div>Delete</div>;
 };
 
 export default AppointmentDeletePage;

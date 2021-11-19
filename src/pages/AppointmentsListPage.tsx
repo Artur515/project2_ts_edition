@@ -1,11 +1,9 @@
-import React from 'react';
+import React from "react";
 import AppointmentsTable from "../components/AppointmentsTable";
 
 const AppointmentsListPage = () => {
 
-
-
-    return (<AppointmentsTable/>);
+  return <AppointmentsTable />;
 };
 
 export default AppointmentsListPage;
