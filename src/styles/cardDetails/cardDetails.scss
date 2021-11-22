@@ -1,0 +1,18 @@
+.card_wrapper {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__card {
+    width: 500px;
+    min-height: 60vh;
+    text-align: center;
+    margin: 10px;
+
+    h1, h2, h3, h4, h5 {
+      padding: 25px 0;
+    }
+  }
+
+}

@@ -7,7 +7,7 @@
       "date": "20-12-2006",
       "time": "11:37",
       "department": "Orthopedics",
-      "status": "Pending",
+      "status": "Date confirmed",
       "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, quo?",
       "contact": "8003459019"
     },
@@ -18,7 +18,7 @@
       "date": "12/06/2021",
       "time": " 12:00 ",
       "department": "Surgery",
-      "status": "Active",
+      "status": "Accepted",
       "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, quo?",
       "contact": "8003459019"
     },
@@ -29,7 +29,7 @@
       "date": "10/02/2021",
       "time": " 10:00 ",
       "department": "Orthopedics",
-      "status": "Active",
+      "status": "Rejected",
       "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, quo?",
       "contact": "8003459019"
     },
@@ -51,7 +51,7 @@
       "date": "12/04/2021",
       "time": " 15:00",
       "department": "Cardiology",
-      "status": "Active",
+      "status": "Pending",
       "notes": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, quo?",
       "contact": "8003459019"
     },

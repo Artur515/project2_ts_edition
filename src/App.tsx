@@ -9,7 +9,7 @@ import Logout from "./google/Logout";
 
 const { Sider, Content } = Layout;
 
-const App = () => {
+const App: React.FC = () => {
   const { setIsAuth } = useCustomDispatch();
   const { isAuth } = useCustomSelector((state) => state.appointmentReducer);
 

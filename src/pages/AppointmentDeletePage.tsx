@@ -1,6 +1,6 @@
-import React from "react";
+import React, {FC} from "react";
 
-const AppointmentDeletePage = () => {
+const AppointmentDeletePage:FC = () => {
   return <div>Delete</div>;
 };
 

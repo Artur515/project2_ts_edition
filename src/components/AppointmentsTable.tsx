@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import { Select, Table } from "antd";
 import { useCustomSelector } from "../hooks/useAppSelector";
 import { useNavigate } from "react-router-dom";
 import { APPOINTMENT_DETAILS_ROUTE } from "../constants/route";
 import { useCustomDispatch } from "../hooks/useCustomDispatch";
 import { getAllAppointments } from "../api";
-import Loader from "./ui/loader/Loader";
+import Loader from "./ui/Loader";
 import { departmentList, statusList } from "../constants/select";
 
 const { Column, ColumnGroup } = Table;
 const { Option } = Select;
 
-const AppointmentsTable = () => {
+const AppointmentsTable: FC = () => {
   const { isAuth, isLoading, appointments } = useCustomSelector(
     (state) => state.appointmentReducer
   );

@@ -1,17 +1,19 @@
-import React, { useEffect } from "react";
+import React, { FC, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getAppointmentIdDetails } from "../api";
 import { useCustomDispatch } from "../hooks/useCustomDispatch";
 import { useCustomSelector } from "../hooks/useAppSelector";
-import Loader from "../components/ui/loader/Loader";
-import { Select } from "antd";
-import { statusList } from "../constants/select";
+import Loader from "../components/ui/Loader";
+import { Button } from "antd";
+import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
+import AppointmentDetailsCard from "../components/AppointmentDetailsCard";
+import SelectStatus from "../components/SelectStatus";
 
-const { Option } = Select;
-
-const AppointmentsDetailsPage = () => {
+const AppointmentsDetailsPage: FC = () => {
   const { setAppointmentWithId, setError, setLoading } = useCustomDispatch();
-  const { isLoading } = useCustomSelector((state) => state.appointmentReducer);
+  const { isLoading, appointmentWithId } = useCustomSelector(
+    (state) => state.appointmentReducer
+  );
   const params = useParams();
 
   const appointmentIdDetails = async (id: string): Promise<void> => {
@@ -38,18 +40,15 @@ const AppointmentsDetailsPage = () => {
   return (
     <>
       <div className="layout__box">
-        <Select
-          size="large"
-          className="layout__box__select"
-          placeholder="Select Status"
-        >
-          {statusList.map((option: string, index: number) => (
-            <Option key={index} value={option}>
-              {option}
-            </Option>
-          ))}
-        </Select>
+        <SelectStatus {...appointmentWithId} />
+        <Button icon={<EditOutlined />} size="large">
+          Edit
+        </Button>
+        <Button icon={<DeleteOutlined />} size="large">
+          Delete
+        </Button>
       </div>
+      <AppointmentDetailsCard {...appointmentWithId} />
     </>
   );
 };

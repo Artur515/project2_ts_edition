@@ -1,8 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import AppointmentsTable from "../components/AppointmentsTable";
 
-const AppointmentsListPage = () => {
-
+const AppointmentsListPage: FC = () => {
   return <AppointmentsTable />;
 };
 
