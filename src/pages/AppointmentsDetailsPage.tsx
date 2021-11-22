@@ -1,5 +1,5 @@
 import React, { FC, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { getAppointmentIdDetails } from "../api";
 import { useCustomDispatch } from "../hooks/useCustomDispatch";
 import { useCustomSelector } from "../hooks/useAppSelector";
@@ -8,13 +8,21 @@ import { Button } from "antd";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import AppointmentDetailsCard from "../components/AppointmentDetailsCard";
 import SelectStatus from "../components/SelectStatus";
+import { APPOINTMENTS_DELETE_ROUTE } from "../constants/routes";
+
+// interface AppointmentIdParams {
+//   id: string;
+// }
 
 const AppointmentsDetailsPage: FC = () => {
   const { setAppointmentWithId, setError, setLoading } = useCustomDispatch();
   const { isLoading, appointmentWithId } = useCustomSelector(
     (state) => state.appointmentReducer
   );
+
   const params = useParams();
+
+  const navigate = useNavigate();
 
   const appointmentIdDetails = async (id: string): Promise<void> => {
     setLoading(true);
@@ -37,6 +45,10 @@ const AppointmentsDetailsPage: FC = () => {
     return <Loader />;
   }
 
+  const handleDeleteAppointment = (id: string) => {
+    navigate(APPOINTMENTS_DELETE_ROUTE(id));
+  };
+
   return (
     <>
       <div className="layout__box">
@@ -44,7 +56,11 @@ const AppointmentsDetailsPage: FC = () => {
         <Button icon={<EditOutlined />} size="large">
           Edit
         </Button>
-        <Button icon={<DeleteOutlined />} size="large">
+        <Button
+          onClick={() => handleDeleteAppointment(params.id as string)}
+          icon={<DeleteOutlined />}
+          size="large"
+        >
           Delete
         </Button>
       </div>

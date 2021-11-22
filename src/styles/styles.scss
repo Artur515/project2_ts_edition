@@ -2,7 +2,7 @@
 @import 'sider/sider';
 @import "loader/loader";
 @import "cardDetails/cardDetails";
-
+@import "deletePage/deletePage";
 
 * {
   margin: 0;
@@ -12,4 +12,8 @@
 
 .cursor {
   cursor: pointer;
+}
+
+.cursor_off {
+  cursor: default;
 }

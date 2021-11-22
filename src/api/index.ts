@@ -6,11 +6,11 @@ const instance = axios.create({
 });
 
 export const getAllAppointments = () => {
-  return instance.get("");
+  return instance.get<Appointments[]>("");
 };
 
 export const getAppointmentIdDetails = (id: string) => {
-  return instance.get(`/${id}`);
+  return instance.get<Appointments>(`/${id}`);
 };
 
 export const deleteAppointmentId = (id: string) => {

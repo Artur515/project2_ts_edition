@@ -2,7 +2,7 @@ import React, { FC, useEffect } from "react";
 import { Select, Table } from "antd";
 import { useCustomSelector } from "../hooks/useAppSelector";
 import { useNavigate } from "react-router-dom";
-import { APPOINTMENT_DETAILS_ROUTE } from "../constants/route";
+import { APPOINTMENT_DETAILS_ROUTE } from "../constants/routes";
 import { useCustomDispatch } from "../hooks/useCustomDispatch";
 import { getAllAppointments } from "../api";
 import Loader from "./ui/Loader";

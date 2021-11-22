@@ -1,29 +1,28 @@
 import { Card } from "antd";
-import React from "react";
+import React, { FC } from "react";
 import { Appointments } from "../types/appointmentsTypes";
 
-const AppointmentDetailsCard = (props: Appointments) => {
-  const {
-    date,
-    time,
-    department,
-    notes,
-    firstName,
-    lastName,
-    contact,
-    status,
-  } = props;
+const AppointmentDetailsCard: FC<Appointments> = ({
+  date,
+  time,
+  department,
+  notes,
+  firstName,
+  lastName,
+  contact,
+  status,
+}) => {
 
   return (
     <div className="card_wrapper">
-      <Card className="card_wrapper__card" title="General Information">
+      <Card  hoverable className="card_wrapper__card cursor_off" title="General Information">
         <h2>
           Appointment date {date} {time}
         </h2>
         <h3>Department: {department}</h3>
         <h3>{notes}</h3>
       </Card>
-      <Card className="card_wrapper__card" title="Contact information">
+      <Card  hoverable className="card_wrapper__card cursor_off" title="Contact information">
         <h2>
           Patient full name:{firstName} {lastName}
         </h2>

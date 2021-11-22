@@ -7,7 +7,7 @@ import {
   APPOINTMENT_EDIT_ROUTE,
   APPOINTMENTS_DELETE_ROUTE,
   ENTRY_ROUTE,
-} from "../constants/route";
+} from "../constants/routes";
 import AppointmentsDetailsPage from "../pages/AppointmentsDetailsPage";
 import AppointmentsEditPage from "../pages/AppointmentsEditPage";
 import AppointmentDeletePage from "../pages/AppointmentDeletePage";

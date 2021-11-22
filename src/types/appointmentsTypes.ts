@@ -19,6 +19,3 @@ export interface AppointmentsState {
   appointments: Array<Appointments>;
 }
 
-export interface AppointmentProps {
-  appointment: Appointments;
-}
